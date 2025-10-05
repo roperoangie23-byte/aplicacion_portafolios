@@ -29,7 +29,7 @@ ticker=st.multiselect("Elija un ticker o varios", lista_tickers)
 
 #Boton
 if st.button("Descargar"):
-    data=yf.download(ticker,period="1mo")["close"]
+    data=yf.download(ticker,period="1mo")
     st.subheader("precio de cierre")
     st.dataframe(data)
 
