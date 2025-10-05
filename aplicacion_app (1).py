@@ -29,6 +29,6 @@ ticker=st.selectbox("Elija un ticker", lista_tickers)
 
 #Boton
 if st.button("Descargar"):
-    data=yf.download(ticker,period="1mo")
+    data=yf.download(ticker,period="1mo")[close]
     st.write(data)
 
