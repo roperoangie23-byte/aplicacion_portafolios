@@ -22,7 +22,7 @@ import yfinance as yf
 st.title("Mi primera aplicacion en Streamlit <3")
 
 #lista de ticker inicial
-lista_tickers=["APPL", "MSFT", "NVDA", "META]
+lista_tickers=["APPL", "MSFT", "NVDA", "META"]
 
 #Slector
 ticker=st.selectbox("Elija un ticker", lista_tickers)
