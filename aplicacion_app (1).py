@@ -27,7 +27,7 @@ lista_tickers=["APPL", "MSFT", "NVDA", "META"]
 #Multiselector
 ticker=st.multiselect("Elija un ticker o varios", lista_tickers)
 #Boton
-st.button("Descargar"):
+if st.button("Descargar"):
   data=yf.download(ticker,period="1mo")["Close"]
   st.subheader("precio de cierre")
   st.dataframe(data)
