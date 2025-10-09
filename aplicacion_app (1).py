@@ -25,10 +25,17 @@ st.title("Mi primera aplicacion en Streamlit <3")
 lista_tickers=["APPL", "MSFT", "NVDA", "META"]
 
 #Multiselector
-ticker=st.multiselect("Elija un ticker o varios", lista_tickers)[Close]
-
+ticker=st.multiselect("Elija un ticker o varios", lista_tickers)
 #Boton
 if st.button("Descargar"):
-    data=yf.download(ticker,period="1mo")
-    st.dataframe(data)
+  data=yf.download(ticker,period="1mo")["Close"]
+  st.subheader("precio de cierre")
+  st.dataframe(data)
+
+  st.subheader("Evolución del precio de cierre")
+  st.line_chart(data)
+else:
+  st.warning("Seleccione al menos un ticker para continuar")
+
+"""Your Streamlit app is running in the background. You can access it by clicking the "Tunnel" button in the "Ports" tab of the left sidebar."""
 
