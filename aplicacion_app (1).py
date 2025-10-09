@@ -25,7 +25,7 @@ st.title("Mi primera aplicacion en Streamlit <3")
 lista_tickers=["APPL", "MSFT", "NVDA", "META"]
 
 #Multiselector
-ticker=st.multiselect("Elija un ticker o varios", lista_tickers)[Cose]
+ticker=st.multiselect("Elija un ticker o varios", lista_tickers)[Close]
 
 #Boton
 if st.button("Descargar"):
